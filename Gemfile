@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 group :development do
   # Contao integration
-  gem 'contao'
+  gem 'contao', '~> 0.4.0'
 
   # Compass plugins
   gem 'compass-h5bp'

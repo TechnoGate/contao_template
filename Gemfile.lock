@@ -30,7 +30,7 @@ GEM
       sass (~> 3.1)
     compass-h5bp (0.0.5)
       compass
-    contao (0.3.4)
+    contao (0.4.0)
       activesupport
       coffee-script
       compass
@@ -112,7 +112,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano-exts (~> 1.14.1)
   compass-h5bp
-  contao
+  contao (~> 0.4.0)
   jasmine
   rb-fsevent
   rb-inotify
