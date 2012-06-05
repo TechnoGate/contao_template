@@ -57,7 +57,7 @@ $GLOBALS['TL_CONFIG']['smtpPass']             = '<%= config.smtp.pass %>';
 <% end %>
 <% if config.smtp.ssl %>
 $GLOBALS['TL_CONFIG']['smtpEnc']              = 'ssl';
-$GLOBALS['TL_CONFIG']['smtpPort']             = <%= config.smtp.port || 465 %>
+$GLOBALS['TL_CONFIG']['smtpPort']             = <%= config.smtp.port || 465 %>;
 <% end %>
 <% unless config.contao_env == :production %>
 $GLOBALS['TL_CONFIG']['cacheMode']            = 'none';
