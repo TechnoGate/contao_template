@@ -31,35 +31,35 @@
 ### INSTALL SCRIPT START ###
 $GLOBALS['TL_CONFIG']['websitePath']          = '';
 $GLOBALS['TL_CONFIG']['licenseAccepted']      = true;
-$GLOBALS['TL_CONFIG']['installPassword']      = '<%= install_password %>';
+$GLOBALS['TL_CONFIG']['installPassword']      = '<%= config.install_password %>';
 $GLOBALS['TL_CONFIG']['installCount']         = 0;
-$GLOBALS['TL_CONFIG']['encryptionKey']        = '<%= encryption_key %>';
+$GLOBALS['TL_CONFIG']['encryptionKey']        = '<%= config.encryption_key %>';
 $GLOBALS['TL_CONFIG']['dbDriver']             = 'MySQL';
-$GLOBALS['TL_CONFIG']['dbHost']               = '<%= mysql_host %>';
-$GLOBALS['TL_CONFIG']['dbUser']               = '<%= mysql_user %>';
-$GLOBALS['TL_CONFIG']['dbPass']               = '<%= mysql_password %>';
-$GLOBALS['TL_CONFIG']['dbDatabase']           = '<%= mysql_database %>';
+$GLOBALS['TL_CONFIG']['dbHost']               = '<%= config.mysql.host || 'localhost' %>';
+$GLOBALS['TL_CONFIG']['dbPort']               = <%= config.mysql.port || 3306 %>;
+$GLOBALS['TL_CONFIG']['dbUser']               = '<%= config.mysql.user %>';
+$GLOBALS['TL_CONFIG']['dbPass']               = '<%= config.mysql.pass %>';
+$GLOBALS['TL_CONFIG']['dbDatabase']           = '<%= config.mysql.database %>';
 $GLOBALS['TL_CONFIG']['dbPconnect']           = false;
 $GLOBALS['TL_CONFIG']['dbCharset']            = 'UTF8';
-$GLOBALS['TL_CONFIG']['dbPort']               = 3306;
-$GLOBALS['TL_CONFIG']['adminEmail']           = '<%= admin_email %>';
+$GLOBALS['TL_CONFIG']['adminEmail']           = '<%= config.admin_email %>';
 $GLOBALS['TL_CONFIG']['cron_weekly']          = 201126;
 $GLOBALS['TL_CONFIG']['latestVersion']        = '2.11.3';
 $GLOBALS['TL_CONFIG']['cron_daily']           = 20110701;
-$GLOBALS['TL_CONFIG']['timeZone']             = '<%= time_zone %>';
+$GLOBALS['TL_CONFIG']['timeZone']             = '<%= config.time_zone %>';
 $GLOBALS['TL_CONFIG']['rewriteURL']           = true;
 $GLOBALS['TL_CONFIG']['allowedTags']          = '<a><abbr><acronym><address><area><article><aside><b><big><blockquote><br><base><bdo><button><caption><cite><code><col><colgroup><dd><del><div><dfn><dl><dt><em><figure><figcaption><form><fieldset><footer><header><hr><h1><h2><h3><h4><h5><h6><i><iframe><img><input><ins><label><legend><li><link><map><object><ol><optgroup><option><p><pre><param><q><section><select><small><span><strong><sub><sup><style><table><tbody><td><textarea><tfoot><th><thead><tr><tt><u><ul>';
-<% if use_smtp %>
+<% if config.smtp.enabled %>
 $GLOBALS['TL_CONFIG']['useSMTP']              = true;
-$GLOBALS['TL_CONFIG']['smtpHost']             = '<%= smtp_host %>';
-$GLOBALS['TL_CONFIG']['smtpUser']             = '<%= smtp_user %>';
-$GLOBALS['TL_CONFIG']['smtpPass']             = '<%= smtp_pass %>';
+$GLOBALS['TL_CONFIG']['smtpHost']             = '<%= config.smtp.host %>';
+$GLOBALS['TL_CONFIG']['smtpUser']             = '<%= config.smtp.user %>';
+$GLOBALS['TL_CONFIG']['smtpPass']             = '<%= config.smtp.pass %>';
 <% end %>
-<% if use_smtp_ssl %>
+<% if config.smtp.ssl %>
 $GLOBALS['TL_CONFIG']['smtpEnc']              = 'ssl';
-$GLOBALS['TL_CONFIG']['smtpPort']             = 465;
+$GLOBALS['TL_CONFIG']['smtpPort']             = <%= config.smtp.port || 465 %>
 <% end %>
-<% unless contao_env == :production %>
+<% unless config.contao_env == :production %>
 $GLOBALS['TL_CONFIG']['cacheMode']            = 'none';
 $GLOBALS['TL_CONFIG']['displayErrors']        = true;
 $GLOBALS['TL_CONFIG']['disableRefererCheck']  = true;
