@@ -1,0 +1,71 @@
+# Logs #
+########
+*.log
+
+# Contao #
+##########
+contao/tl_files/contenu/
+contao/tl_files/contents/
+
+# Temporary Files #
+###################
+.sass-cache/
+tmp/
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+.Spotlight-V100
+.Trashes
+Desktop.ini
+.directory
+
+# Text-Editors files #
+######################
+*.tmproj
+*.tmproject
+tmtags
+*~
+\#*
+.\#*
+.redcar
+.*.sw[a-z]
+*.un~
+Session.vim
+*.pydevproject
+.project
+.metadata
+*.tmp
+*.bak
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.cproject
+nbproject/
+nbactions.xml
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+
+# Other Version Control Systems #
+#################################
+.svn/
+
+
+
+
+
+# Unignore some important files #
+#################################
+!.keep
+!.gitkeep
+!.gitignore

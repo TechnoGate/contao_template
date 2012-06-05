@@ -1,0 +1,4 @@
+<!-- indexer::stop -->
+<div id="<?php echo $this->id; ?>">
+ <iframe src="http://player.vimeo.com/video/<?php echo $this->vimeoid; ?>?<?php echo $this->params; ?>" width="<?php echo $this->width; ?>" height="<?php echo $this->height; ?>" frameborder="0"></iframe>
+<!-- indexer::continue -->

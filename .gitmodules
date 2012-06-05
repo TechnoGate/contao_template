@@ -1,0 +1,9 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/contao/core.git
+[submodule "contao/system/modules/contao_assets"]
+	path = contao/system/modules/contao_assets
+	url = git@git.agence-durable.com:Agence_Durable/contao_assets.git
+[submodule "contao/system/modules/assets"]
+	path = contao/system/modules/assets
+	url = https://github.com/TechnoGate/contao_assets.git

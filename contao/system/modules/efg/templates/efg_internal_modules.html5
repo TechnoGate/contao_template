@@ -1,0 +1,56 @@
+<?php echo '<?php'; ?> if (!defined('TL_ROOT')) die('You can not access this file directly!');
+
+/**
+ * Contao Open Source CMS
+ * Copyright (C) 2005-2012 Leo Feyer
+ *
+ * Formerly known as TYPOlight Open Source CMS.
+ *
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation, either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, please visit the Free
+ * Software Foundation website at <http://www.gnu.org/licenses/>.
+ *
+ * Language file for modules.
+ *
+ * PHP version 5
+ * @copyright  Thomas Kuhn 2007-2012
+ * @author     Thomas Kuhn <mail@th-kuhn.de>
+ * @package    efg
+ * @license    LGPL
+ */
+
+<?php $this->import('String'); ?>
+<?php echo '// This file is created when saving a form in form generator' . "\n"; ?>
+<?php echo '// last created on ' .date("Y-m-d H:i:s") . ' by saving form "' . $this->arrForm['title'] . '"' . "\n"; ?>
+
+
+/**
+ * Back end modules
+ */
+
+$GLOBALS['TL_LANG']['MOD']['formdata'] = '<?php echo str_replace("'", "\'", $this->String->decodeEntities($GLOBALS['TL_LANG']['MOD']['formdata'])); ?>';
+$GLOBALS['TL_LANG']['MOD']['efg'] = '<?php echo str_replace("'", "\'", $this->String->decodeEntities($GLOBALS['TL_LANG']['MOD']['efg'])); ?>';
+$GLOBALS['TL_LANG']['MOD']['feedback'] = array('<?php echo str_replace("'", "\'", $this->String->decodeEntities($GLOBALS['TL_LANG']['MOD']['feedback'][0])); ?>', '<?php echo str_replace("'", "\'", $this->String->decodeEntities($GLOBALS['TL_LANG']['MOD']['feedback'][1])); ?>');
+
+$GLOBALS['TL_LANG']['MOD']['formdatalisting'] = array('<?php echo str_replace("'", "\'", $this->String->decodeEntities($GLOBALS['TL_LANG']['MOD']['formdatalisting'][0])); ?>', '<?php echo str_replace("'", "\'", $this->String->decodeEntities($GLOBALS['TL_LANG']['MOD']['formdatalisting'][1])); ?>');
+
+<?php foreach($this->arrStoreForms as $strKey=>$arrVals): ?>
+$GLOBALS['TL_LANG']['MOD']['fd_<?php echo $strKey; ?>'] = array('<?php echo str_replace("'", "\'", $this->String->decodeEntities($arrVals['title'])); ?>', '<?php echo str_replace("'", "\'", $this->String->decodeEntities($GLOBALS['TL_LANG']['MOD']['formdata_from'])); ?> "<?php echo str_replace("'", "\'", $this->String->decodeEntities($arrVals['title'])); ?>".');
+<?php endforeach; ?>
+
+/**
+ * Front end modules
+ */
+$GLOBALS['TL_LANG']['FMD']['formdatalisting'] = array('<?php echo str_replace("'", "\'", $this->String->decodeEntities($GLOBALS['TL_LANG']['FMD']['formdatalisting'][0])); ?>', '<?php echo str_replace("'", "\'", $this->String->decodeEntities($GLOBALS['TL_LANG']['FMD']['formdatalisting'][1])); ?>');
+
+?>

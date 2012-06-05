@@ -1,0 +1,69 @@
+<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+
+/**
+ * Contao Open Source CMS
+ * Copyright (C) 2005-2011 Leo Feyer
+ *
+ * Formerly known as TYPOlight Open Source CMS.
+ *
+ * This program is free software: you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation, either
+ * version 3 of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this program. If not, please visit the Free
+ * Software Foundation website at <http://www.gnu.org/licenses/>.
+ *
+ * PHP version 5
+ * @copyright  Leo Feyer 2005-2011
+ * @author     Leo Feyer <http://www.contao.org>
+ * @package    Config
+ * @license    LGPL
+ * @filesource
+ */
+
+### INSTALL SCRIPT START ###
+$GLOBALS['TL_CONFIG']['websitePath']          = '';
+$GLOBALS['TL_CONFIG']['licenseAccepted']      = true;
+$GLOBALS['TL_CONFIG']['installPassword']      = '<%= install_password %>';
+$GLOBALS['TL_CONFIG']['installCount']         = 0;
+$GLOBALS['TL_CONFIG']['encryptionKey']        = '<%= encryption_key %>';
+$GLOBALS['TL_CONFIG']['dbDriver']             = 'MySQL';
+$GLOBALS['TL_CONFIG']['dbHost']               = '<%= mysql_host %>';
+$GLOBALS['TL_CONFIG']['dbUser']               = '<%= mysql_user %>';
+$GLOBALS['TL_CONFIG']['dbPass']               = '<%= mysql_password %>';
+$GLOBALS['TL_CONFIG']['dbDatabase']           = '<%= mysql_database %>';
+$GLOBALS['TL_CONFIG']['dbPconnect']           = false;
+$GLOBALS['TL_CONFIG']['dbCharset']            = 'UTF8';
+$GLOBALS['TL_CONFIG']['dbPort']               = 3306;
+$GLOBALS['TL_CONFIG']['adminEmail']           = '<%= admin_email %>';
+$GLOBALS['TL_CONFIG']['cron_weekly']          = 201126;
+$GLOBALS['TL_CONFIG']['latestVersion']        = '2.11.3';
+$GLOBALS['TL_CONFIG']['cron_daily']           = 20110701;
+$GLOBALS['TL_CONFIG']['timeZone']             = '<%= time_zone %>';
+$GLOBALS['TL_CONFIG']['rewriteURL']           = true;
+$GLOBALS['TL_CONFIG']['allowedTags']          = '<a><abbr><acronym><address><area><article><aside><b><big><blockquote><br><base><bdo><button><caption><cite><code><col><colgroup><dd><del><div><dfn><dl><dt><em><figure><figcaption><form><fieldset><footer><header><hr><h1><h2><h3><h4><h5><h6><i><iframe><img><input><ins><label><legend><li><link><map><object><ol><optgroup><option><p><pre><param><q><section><select><small><span><strong><sub><sup><style><table><tbody><td><textarea><tfoot><th><thead><tr><tt><u><ul>';
+<% if use_smtp %>
+$GLOBALS['TL_CONFIG']['useSMTP']              = true;
+$GLOBALS['TL_CONFIG']['smtpHost']             = '<%= smtp_host %>';
+$GLOBALS['TL_CONFIG']['smtpUser']             = '<%= smtp_user %>';
+$GLOBALS['TL_CONFIG']['smtpPass']             = '<%= smtp_pass %>';
+<% end %>
+<% if use_smtp_ssl %>
+$GLOBALS['TL_CONFIG']['smtpEnc']              = 'ssl';
+$GLOBALS['TL_CONFIG']['smtpPort']             = 465;
+<% end %>
+<% unless contao_env == :production %>
+$GLOBALS['TL_CONFIG']['cacheMode']            = 'none';
+$GLOBALS['TL_CONFIG']['displayErrors']        = true;
+$GLOBALS['TL_CONFIG']['disableRefererCheck']  = true;
+<% end %>
+### INSTALL SCRIPT STOP ###
+
+?>
