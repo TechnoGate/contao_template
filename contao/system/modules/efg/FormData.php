@@ -425,7 +425,7 @@ class FormData extends Frontend
 		if($intId > 0)
 		{
 			$objFormdata = $this->Database->prepare("SELECT * FROM tl_formdata WHERE id=?")
-										->execute($intId);
+										->executeUncached($intId);
 			if ($objFormdata->numRows == 1)
 			{
 				$varReturn['fd_base'] = $objFormdata->fetchAssoc();
