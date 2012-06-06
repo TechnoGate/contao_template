@@ -7,3 +7,6 @@
 [submodule "contao/system/modules/assets"]
 	path = contao/system/modules/assets
 	url = https://github.com/TechnoGate/contao_assets.git
+[submodule "contao/system/modules/template-override"]
+	path = contao/system/modules/template-override
+	url = https://github.com/qzminski/contao-template-override.git
