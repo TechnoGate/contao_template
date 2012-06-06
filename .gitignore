@@ -7,6 +7,11 @@
 contao/tl_files/contenu/
 contao/tl_files/contents/
 
+# Jasmine #
+###########
+
+spec/javascripts/compiled/
+
 # Temporary Files #
 ###################
 .sass-cache/
