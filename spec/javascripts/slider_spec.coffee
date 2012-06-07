@@ -210,6 +210,8 @@ describe 'Slider', ->
 
   describe "Step", ->
     beforeEach ->
+      jasmine.getFixtures().cleanUp()
+      loadFixtures 'slider.html'
       @options.step = 1
       @slider = new Slider @options
 
