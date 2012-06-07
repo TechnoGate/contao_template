@@ -110,7 +110,9 @@ window.Slider = class Slider
       value - (@step * @item_width)
 
   handle_arrow_event: (direction) ->
-    @tray.css 'left', (@calculate_left_value direction, (@tray.css 'left'))
+    @tray.css 'left',
+    @tray.animate {'left': (@calculate_left_value direction, (@tray.css 'left'))},
+      duration: @options.duration or 500
 
     if @slided <= 0
       @left_arrow().addClass 'disabled'
