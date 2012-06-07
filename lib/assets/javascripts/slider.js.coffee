@@ -76,10 +76,10 @@ window.Slider = class Slider
     value = parseInt(value) or 0
     if direction == 'left'
       @slided -= @step
-      value - (@step * @item_width)
+      value + (@step * @item_width)
     else
       @slided += @step
-      value + (@step * @item_width)
+      value - (@step * @item_width)
 
   handle_arrow_event: (direction) ->
     @tray.css 'left', (@calculate_left_value direction, (@tray.css 'left'))

@@ -106,12 +106,12 @@ describe 'Slider', ->
       ($ '#slider .left_arrow').removeClass 'disabled'
       ($ '#slider .left_arrow').click()
 
-      (expect ($ '#slider .slider_tray').css 'left').toEqual '-426px'
+      (expect ($ '#slider .slider_tray').css 'left').toEqual '426px'
 
     it 'should move everything to the right', ->
       ($ '#slider > .right_arrow').click()
 
-      (expect ($ '#slider .slider_tray').css 'left').toEqual '426px'
+      (expect ($ '#slider .slider_tray').css 'left').toEqual '-426px'
 
     it 'should not do anything if the left button is disabled', ->
       spyOn @slider, 'handle_arrow_event'
@@ -221,4 +221,4 @@ describe 'Slider', ->
     it 'should move step by step', ->
       ($ '#slider > .right_arrow').click()
 
-      (expect ($ '#slider .slider_tray').css 'left').toEqual '142px'
+      (expect ($ '#slider .slider_tray').css 'left').toEqual '-142px'
