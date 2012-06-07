@@ -36,12 +36,8 @@ describe 'Slider', ->
     (expect ($ '#slider ul.slider_tray').parent()).toBe('div.slider_window')
 
   it 'should create a left_arrow and right_arrow if controls is requested', ->
-    (expect ($ '#slider > .left_arrow')).toExist()
-    (expect ($ '#slider > .right_arrow')).toExist()
-
-  it 'should set the cursor to pointer on the arrows', ->
-    (expect ($ '#slider > .left_arrow').css 'cursor').toEqual 'pointer'
-    (expect ($ '#slider > .right_arrow').css 'cursor').toEqual 'pointer'
+    (expect ($ '#slider > a.left_arrow')).toExist()
+    (expect ($ '#slider > a.right_arrow')).toExist()
 
   it 'should hardcode the CSS for all elements', ->
     # window
@@ -68,9 +64,11 @@ describe 'Slider', ->
     (expect ($ '#slider ul.slider_tray > li').css 'overflow').toEqual 'hidden'
 
     # buttons
+    (expect ($ '#slider .left_arrow').css 'display').toEqual 'block'
     (expect ($ '#slider .left_arrow').css 'float').toEqual 'left'
     (expect ($ '#slider .left_arrow').css 'margin-top').toEqual '50px'
     (expect ($ '#slider .left_arrow').hasClass 'disabled').toBeTruthy()
+    (expect ($ '#slider .right_arrow').css 'display').toEqual 'block'
     (expect ($ '#slider .right_arrow').css 'float').toEqual 'left'
     (expect ($ '#slider .right_arrow').css 'margin-top').toEqual '50px'
 

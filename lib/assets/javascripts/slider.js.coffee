@@ -49,7 +49,7 @@ window.Slider = class Slider
   right_arrow: -> @slider.find('.right_arrow').first()
 
   arrow_html: (direction) ->
-    "<div class='#{direction}_arrow' style='cursor: pointer;'></div>"
+    "<a href='#'class='#{direction}_arrow'></a>"
 
   wrapper_html: ->
 
@@ -93,10 +93,12 @@ window.Slider = class Slider
     @left_arrow().css
       'margin-top': "#{@item_height / 2}px"
       float:        'left'
+      display:      'block'
 
     @right_arrow().css
       'margin-top': "#{@item_height / 2}px"
       float:        'left'
+      display:      'block'
 
   calculate_left_value: (direction, value) ->
     value = parseInt(value) or 0
