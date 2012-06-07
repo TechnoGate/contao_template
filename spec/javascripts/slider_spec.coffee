@@ -212,8 +212,11 @@ describe 'Slider', ->
     beforeEach ->
       jasmine.getFixtures().cleanUp()
       loadFixtures 'slider.html'
-      @options.step = 1
+      @options.step = null
       @slider = new Slider @options
+
+    it 'should defaults to 1', ->
+      (expect @slider.step).toEqual 1
 
     it 'should move step by step', ->
       ($ '#slider > .right_arrow').click()

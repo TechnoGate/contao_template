@@ -10,6 +10,7 @@ window.Slider = class Slider
     @item_height = @tray.find('li').first().outerHeight(true)
     @items       = @tray.find('li')
     @display     = @options.display or 1
+    @step        = @options.step or 1
 
     @tray.addClass 'slider_tray'
     @create_arrows() if @options.controls
@@ -74,11 +75,11 @@ window.Slider = class Slider
   calculate_left_value: (direction, value) ->
     value = parseInt(value) or 0
     if direction == 'left'
-      @slided -= @options.step
-      value - (@options.step * @item_width)
+      @slided -= @step
+      value - (@step * @item_width)
     else
-      @slided += @options.step
-      value + (@options.step * @item_width)
+      @slided += @step
+      value + (@step * @item_width)
 
   handle_arrow_event: (direction) ->
     @tray.css 'left', (@calculate_left_value direction, (@tray.css 'left'))
