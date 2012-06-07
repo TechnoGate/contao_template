@@ -128,6 +128,86 @@ describe 'Slider', ->
 
       (expect @slider.handle_arrow_event).not.toHaveBeenCalledWith 'right'
 
+   it 'should enable both buttons if we can scroll more', ->
+     ($ '#slider .right_arrow').click()
+
+     (expect ($ '#slider .right_arrow').hasClass 'disabled').toBeFalsy()
+     (expect ($ '#slider .left_arrow').hasClass 'disabled').toBeFalsy()
+
+   it 'should disable the right button and enable the left one if the right was clicked', ->
+     ($ '#slider .right_arrow').click()
+     ($ '#slider .right_arrow').click()
+
+     (expect ($ '#slider .right_arrow').hasClass 'disabled').toBeTruthy()
+     (expect ($ '#slider .left_arrow').hasClass 'disabled').toBeFalsy()
+
+   describe "with different display/step", ->
+     beforeEach ->
+       jasmine.getFixtures().cleanUp()
+       loadFixtures 'slider.html'
+
+     describe "display: 1, step: 1", ->
+       beforeEach ->
+         @options.display = 1
+         @options.step = 1
+
+         @slider = new Slider @options
+
+       it 'should enable both buttons if we can scroll more', ->
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+
+         (expect ($ '#slider .right_arrow').hasClass 'disabled').toBeFalsy()
+         (expect ($ '#slider .left_arrow').hasClass 'disabled').toBeFalsy()
+
+       it 'should disable the right button and enable the left one if the right was clicked', ->
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+
+         (expect ($ '#slider .right_arrow').hasClass 'disabled').toBeTruthy()
+         (expect ($ '#slider .left_arrow').hasClass 'disabled').toBeFalsy()
+
+     describe "display: 2, step: 1", ->
+       beforeEach ->
+         @options.display = 2
+         @options.step = 1
+
+         @slider = new Slider @options
+
+       it 'should enable both buttons if we can scroll more', ->
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+
+         (expect ($ '#slider .right_arrow').hasClass 'disabled').toBeFalsy()
+         (expect ($ '#slider .left_arrow').hasClass 'disabled').toBeFalsy()
+
+       it 'should disable the right button and enable the left one if the right was clicked', ->
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+         ($ '#slider .right_arrow').click()
+
+         (expect ($ '#slider .right_arrow').hasClass 'disabled').toBeTruthy()
+         (expect ($ '#slider .left_arrow').hasClass 'disabled').toBeFalsy()
+
   describe "Step", ->
     beforeEach ->
       @options.step = 1

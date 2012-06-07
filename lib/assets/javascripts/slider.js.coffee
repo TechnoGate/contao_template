@@ -16,6 +16,7 @@ window.Slider = class Slider
     @tray.wrap "<div class='slider_window' />"
     @window = @tray.parent()
     @set_css()
+    @slided = 0
 
   left_arrow:  -> @slider.find('.left_arrow').first()
   right_arrow: -> @slider.find('.right_arrow').first()
@@ -73,9 +74,21 @@ window.Slider = class Slider
   calculate_left_value: (direction, value) ->
     value = parseInt(value) or 0
     if direction == 'left'
+      @slided -= @options.step
       value - (@options.step * @item_width)
     else
+      @slided += @options.step
       value + (@options.step * @item_width)
 
   handle_arrow_event: (direction) ->
     @tray.css 'left', (@calculate_left_value direction, (@tray.css 'left'))
+
+    if @slided <= 0
+      @left_arrow().addClass 'disabled'
+      @right_arrow().removeClass 'disabled'
+    else if @slided >= @item_count - @display
+      @right_arrow().addClass 'disabled'
+      @left_arrow().removeClass 'disabled'
+    else
+      @left_arrow().removeClass 'disabled'
+      @right_arrow().removeClass 'disabled'
