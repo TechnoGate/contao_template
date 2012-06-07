@@ -1,1 +1,0 @@
-../../../vendor/assets/javascripts/00-jquery.js
