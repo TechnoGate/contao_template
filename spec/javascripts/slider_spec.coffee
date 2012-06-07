@@ -9,6 +9,7 @@ describe 'Slider', ->
       duration: 500
       controls: true
       display: 3
+      step: 3
 
     @slider = new Slider @options
 
@@ -23,7 +24,7 @@ describe 'Slider', ->
     (expect @slider.options).toEqual @options
 
   it 'should set the item count', ->
-    (expect @slider.item_count).toEqual 6
+    (expect @slider.item_count).toEqual 9
 
   it 'should be able to figure out the outerWidth', ->
     (expect @slider.item_width).toEqual 142
@@ -51,7 +52,7 @@ describe 'Slider', ->
     (expect ($ '#slider .slider_window').css 'float').toEqual 'left'
 
     # ul
-    (expect ($ '#slider ul.slider_tray').css 'width').toEqual '852px'
+    (expect ($ '#slider ul.slider_tray').css 'width').toEqual '1278px'
     (expect ($ '#slider ul.slider_tray').css 'height').toEqual '120px'
     (expect ($ '#slider ul.slider_tray').css 'display').toEqual 'block'
     (expect ($ '#slider ul.slider_tray').css 'position').toEqual 'relative'
@@ -126,3 +127,13 @@ describe 'Slider', ->
       ($ '#slider .right_arrow').click()
 
       (expect @slider.handle_arrow_event).not.toHaveBeenCalledWith 'right'
+
+  describe "Step", ->
+    beforeEach ->
+      @options.step = 1
+      @slider = new Slider @options
+
+    it 'should move step by step', ->
+      ($ '#slider > .right_arrow').click()
+
+      (expect ($ '#slider .slider_tray').css 'left').toEqual '142px'
