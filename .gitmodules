@@ -13,3 +13,6 @@
 [submodule "vendor/plugins/colorbox"]
 	path = vendor/plugins/colorbox
 	url = git://github.com/jackmoore/colorbox.git
+[submodule "vendor/plugins/humane-js"]
+	path = vendor/plugins/humane-js
+	url = git://github.com/wavded/humane-js.git
