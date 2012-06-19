@@ -10,6 +10,6 @@
 [submodule "contao/system/modules/template-override"]
 	path = contao/system/modules/template-override
 	url = https://github.com/qzminski/contao-template-override.git
-[submodule "vendor/assets/javascripts/10-colorbox"]
-	path = vendor/assets/javascripts/10-colorbox
+[submodule "vendor/plugins/colorbox"]
+	path = vendor/plugins/colorbox
 	url = git://github.com/jackmoore/colorbox.git
