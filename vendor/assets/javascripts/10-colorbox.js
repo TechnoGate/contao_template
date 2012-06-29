@@ -1,1 +1,0 @@
-../../plugins/colorbox/colorbox/jquery.colorbox.js
