@@ -1,3 +1,5 @@
+#= require slider
+
 describe 'Slider', ->
   beforeEach ->
     loadFixtures 'slider.html'

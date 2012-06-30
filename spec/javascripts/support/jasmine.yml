@@ -11,9 +11,7 @@
 #   - dist/**/*.js
 #
 src_files:
-  - "vendor/**/*.{js,coffee}"
-  - "lib/**/*.{js,coffee}"
-  - "app/**/*.{js,coffee}"
+  - "**/*.*"
 
 # stylesheets
 #
@@ -27,9 +25,6 @@ src_files:
 #   - stylesheets/*.css
 #
 stylesheets:
-  - "vendor/**/*.css"
-  - "lib/**/*.css"
-  - "app/**/*.css"
 
 # helpers
 #
@@ -55,7 +50,7 @@ helpers:
 #   - **/*[sS]pec.js
 #
 spec_files:
-  - "**/*[Ss]pec.{js,coffee}"
+  - "**/*[Ss]pec.*"
 
 # src_dir
 #
@@ -66,7 +61,10 @@ spec_files:
 #
 # src_dir: public
 #
-src_dir: app/assets/javascripts
+src_dir:
+  - app/assets/javascripts
+  - lib/assets/javascripts
+  - vendor/assets/javascripts
 
 # spec_dir
 #

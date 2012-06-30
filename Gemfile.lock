@@ -85,6 +85,7 @@ GEM
       jasmine
       jasmine-headless-webkit
       rails (>= 3.1.0)
+    jasmine-spec-extras (0.0.2)
     journey (1.0.4)
     jquery-rails (2.0.2)
       railties (>= 3.2.0, < 5.0)
@@ -173,6 +174,7 @@ DEPENDENCIES
   contao!
   foreman
   jasmine-rails
+  jasmine-spec-extras
   jquery-rails
   oily_png
   rails (= 3.2.6)

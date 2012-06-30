@@ -31,4 +31,5 @@ end
 
 group :development, :test do
   gem 'jasmine-rails'
+  gem 'jasmine-spec-extras'
 end
