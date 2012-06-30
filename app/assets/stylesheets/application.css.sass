@@ -17,3 +17,17 @@
 
 // Require definitions
 @import 'definitions/all'
+
+.hidden-text
+  +hide-text
+
+.clear, .clr, .clearfix
+  +clearfix
+  width: 0px
+  height: 0px
+  clear: both
+
+body
+  #wrapper
+    width: $layout_width
+    margin: 0 auto
