@@ -24,6 +24,11 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-gem 'foreman'
+group :development do
+  gem 'foreman'
+  gem 'contao', github: 'TechnoGate/contao', branch: 'use_rails'
+end
 
-gem 'contao', github: 'TechnoGate/contao', branch: 'use_rails'
+group :development, :test do
+  gem 'jasmine-rails'
+end
