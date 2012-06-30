@@ -26,7 +26,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'foreman'
-  gem 'contao', github: 'TechnoGate/contao', branch: 'use_rails'
+  gem 'contao', '>= 0.5.0'
 end
 
 group :development, :test do
