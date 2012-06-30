@@ -173,6 +173,7 @@ DEPENDENCIES
   compass-rails
   contao!
   foreman
+  jasmine-headless-webkit
   jasmine-rails
   jasmine-spec-extras
   jquery-rails

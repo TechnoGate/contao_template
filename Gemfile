@@ -31,5 +31,6 @@ end
 
 group :development, :test do
   gem 'jasmine-rails'
+  gem 'jasmine-headless-webkit'
   gem 'jasmine-spec-extras'
 end
