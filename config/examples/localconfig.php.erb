@@ -59,7 +59,7 @@ $GLOBALS['TL_CONFIG']['smtpPass']             = '<%= config.smtp.pass %>';
 $GLOBALS['TL_CONFIG']['smtpEnc']              = 'ssl';
 $GLOBALS['TL_CONFIG']['smtpPort']             = <%= config.smtp.port || 465 %>;
 <% end %>
-<% unless config.contao_env == :production %>
+<% unless Rails.env.production? %>
 $GLOBALS['TL_CONFIG']['cacheMode']            = 'none';
 $GLOBALS['TL_CONFIG']['displayErrors']        = true;
 $GLOBALS['TL_CONFIG']['disableRefererCheck']  = true;

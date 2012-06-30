@@ -24,3 +24,5 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 gem 'foreman'
+
+gem 'contao', github: 'TechnoGate/contao', branch: 'use_rails'
