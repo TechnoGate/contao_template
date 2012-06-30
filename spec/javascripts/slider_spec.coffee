@@ -1,3 +1,5 @@
+#= require slider
+
 describe 'Slider', ->
   beforeEach ->
     loadFixtures 'slider.html'
@@ -53,9 +55,9 @@ describe 'Slider', ->
     (expect ($ '#slider ul.slider_tray').css 'display').toEqual 'block'
     (expect ($ '#slider ul.slider_tray').css 'position').toEqual 'relative'
     (expect ($ '#slider ul.slider_tray').css 'overflow').toEqual 'hidden'
-    (expect ($ '#slider ul.slider_tray').css 'list-style').toEqual 'none outside none'
-    (expect ($ '#slider ul.slider_tray').css 'margin').toEqual '0px'
-    (expect ($ '#slider ul.slider_tray').css 'padding').toEqual '0px'
+    (expect ($ '#slider ul.slider_tray').css 'list-style').toEqual ''
+    (expect ($ '#slider ul.slider_tray').css 'margin').toEqual ''
+    (expect ($ '#slider ul.slider_tray').css 'padding').toEqual ''
 
     # li
     (expect ($ '#slider ul.slider_tray > li').css 'position').toEqual 'relative'
@@ -100,16 +102,16 @@ describe 'Slider', ->
 
       (expect @slider.handle_arrow_event).toHaveBeenCalledWith 'right'
 
-    it 'should move everything to the left', ->
-      ($ '#slider .left_arrow').removeClass 'disabled'
-      ($ '#slider .left_arrow').click()
-
-      (expect ($ '#slider .slider_tray').css 'left').toEqual '426px'
-
     it 'should move everything to the right', ->
       ($ '#slider > .right_arrow').click()
 
       (expect ($ '#slider .slider_tray').css 'left').toEqual '-426px'
+
+    it 'should move everything to the left', ->
+      ($ '#slider .left_arrow').click()
+
+      (expect ($ '#slider .slider_tray').css 'left').toEqual '426px'
+
 
     it 'should not do anything if the left button is disabled', ->
       spyOn @slider, 'handle_arrow_event'

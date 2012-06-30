@@ -1,22 +1,15 @@
 //
-// Third party plugins
+// Imports
 //
 
-// PIE
-@import 'thirdparty/pie'
+@import "compass/css3/pie"
+@import "compass/css3"
 
-// CSS3
-@import 'compass/css3'
-
-// Include compass-h5bp, Keep Enabled!
-@import 'thirdparty/compass_h5bp'
+$pie-behavior: url('/plugins/css3pie/PIE.htc')
+$pie-base-class: pie-element
 
 // Include blueprint
 @import 'blueprint'
-
-// Include Colorbox
-@import "thirdparty/colorbox"
-@import "thirdparty/colorbox_overrides"
 
 // Min height
 @import 'compass/utilities/general/min'
@@ -40,19 +33,6 @@
 // Definitions
 //
 
-// Include Variables and Mixins
 @import 'definitions/variables'
 @import 'definitions/mixins'
-
-//
-// Sprites
-//
-
-@import "definitions/sprites"
-
-//
-// Modules
-//
-
-// Import your modules below this line
-@import "modules/global"
+@import 'definitions/sprites'

@@ -1,18 +1,12 @@
 [submodule "public"]
 	path = public
 	url = https://github.com/contao/core.git
-[submodule "contao/system/modules/contao_assets"]
-	path = contao/system/modules/contao_assets
-	url = git@git.agence-durable.com:Agence_Durable/contao_assets.git
 [submodule "contao/system/modules/assets"]
 	path = contao/system/modules/assets
 	url = https://github.com/TechnoGate/contao_assets.git
 [submodule "contao/system/modules/template-override"]
 	path = contao/system/modules/template-override
 	url = https://github.com/qzminski/contao-template-override.git
-[submodule "vendor/plugins/colorbox"]
-	path = vendor/plugins/colorbox
-	url = git://github.com/jackmoore/colorbox.git
-[submodule "vendor/plugins/humane-js"]
-	path = vendor/plugins/humane-js
-	url = git://github.com/wavded/humane-js.git
+[submodule "lib/contao/libraries/spyc"]
+	path = lib/contao/libraries/spyc
+	url = https://github.com/mustangostang/spyc.git

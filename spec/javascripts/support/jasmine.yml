@@ -11,7 +11,7 @@
 #   - dist/**/*.js
 #
 src_files:
-    - public/resources/**/*.js
+  - "**/*.*"
 
 # stylesheets
 #
@@ -37,10 +37,11 @@ stylesheets:
 #   - helpers/**/*.js
 #
 helpers:
+  - "helpers/**/*.{js,coffee}"
 
 # spec_files
 #
-#  Return an array of filepaths relative to spec_dir to include.
+# Return an array of filepaths relative to spec_dir to include.
 # Default: ["**/*[sS]pec.js"]
 #
 # EXAMPLE:
@@ -49,6 +50,7 @@ helpers:
 #   - **/*[sS]pec.js
 #
 spec_files:
+  - "**/*[Ss]pec.*"
 
 # src_dir
 #
@@ -60,6 +62,9 @@ spec_files:
 # src_dir: public
 #
 src_dir:
+  - app/assets/javascripts
+  - lib/assets/javascripts
+  - vendor/assets/javascripts
 
 # spec_dir
 #
@@ -70,4 +75,4 @@ src_dir:
 #
 # spec_dir: spec/javascripts
 #
-spec_dir:
+spec_dir: spec/javascripts
