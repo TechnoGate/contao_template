@@ -7,3 +7,6 @@
 [submodule "contao/system/modules/template-override"]
 	path = contao/system/modules/template-override
 	url = https://github.com/qzminski/contao-template-override.git
+[submodule "lib/contao/libraries/spyc"]
+	path = lib/contao/libraries/spyc
+	url = https://github.com/mustangostang/spyc.git
