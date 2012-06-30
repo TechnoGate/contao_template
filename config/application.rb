@@ -28,6 +28,9 @@ module ContaoTemplate
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    # Change the prefix of the assets
+    config.assets.prefix = 'resources'
+
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
