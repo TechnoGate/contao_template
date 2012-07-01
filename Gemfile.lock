@@ -43,7 +43,7 @@ GEM
       capistrano-server
       capistrano-utils
       rake
-    capistrano-database (0.0.4)
+    capistrano-database (0.0.5)
       activesupport
       capistrano-utils
       rake
