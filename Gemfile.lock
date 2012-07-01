@@ -50,7 +50,7 @@ GEM
       capistrano (>= 2.12.0)
       capistrano-utils
       rake
-    capistrano-database (0.0.6)
+    capistrano-database (0.0.7)
       capistrano-utils
       rake
     capistrano-multistage (0.0.3)
@@ -60,7 +60,7 @@ GEM
       capistrano
       capistrano-utils
       rake
-    capistrano-utils (0.0.7)
+    capistrano-utils (0.0.8)
       capistrano (>= 2.12.0)
       rake
     capistrano_colors (0.5.5)
