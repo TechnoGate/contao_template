@@ -121,30 +121,6 @@ set :db_credentials_file, -> { "#{deploy_to}/.#{db_server_app}_credentials"}
 # NOTE: Only required for db_create_user
 set :db_root_credentials_file,             "/root/.#{db_server_app}_credentials"
 
-# Define the regex / match that will be ran against the contents of the file above to fetch the hostname
-# Default: /hostname: (.*)$/o
-# set :db_credentials_host_regex,            /hostname: (.*)$/o
-# Default: 1
-# set :db_credentials_host_regex_match,      1
-
-# Define the regex / match that will be ran against the contents of the file above to fetch the portname
-# Default: /port: (.*)$/o
-# set :db_credentials_port_regex,            /port: (.*)$/o
-# Default: 1
-# set :db_credentials_port_regex_match,      1
-
-# Define the regex / match that will be ran against the contents of the file above to fetch the username
-# Default: /username: (.*)$/o
-# set :db_credentials_user_regex,            /username: (.*)$/o
-# Default: 1
-# set :db_credentials_user_regex_match,      1
-
-# Define the regex / match that will be ran against the contents of the file above to fetch the password
-# Default: /password: (.*)$/o
-# set :db_credentials_pass_regex,            /password: (.*)$/o
-# Default: 1
-# set :db_credentials_pass_regex_match,      1
-
 #############
 # Web server
 #
