@@ -23,7 +23,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'foreman'
-  gem 'contao', '>= 0.5.0', path: '../contao'
+  gem 'contao'
 
   gem 'capistrano-contao'
   gem 'capistrano_colors'
