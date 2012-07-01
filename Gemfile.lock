@@ -37,7 +37,7 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
-    capistrano-contao (0.0.3)
+    capistrano-contao (0.0.4)
       activesupport
       capistrano (>= 2.12.0)
       capistrano-content
@@ -45,7 +45,7 @@ GEM
       capistrano-server
       capistrano-utils
       rake
-    capistrano-content (0.0.2)
+    capistrano-content (0.0.3)
       capistrano (>= 2.12.0)
       capistrano-utils
       rake
@@ -57,7 +57,7 @@ GEM
       capistrano
       capistrano-utils
       rake
-    capistrano-utils (0.0.5)
+    capistrano-utils (0.0.6)
       capistrano (>= 2.12.0)
       rake
     capistrano_colors (0.5.5)
