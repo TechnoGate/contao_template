@@ -34,12 +34,14 @@ $GLOBALS['TL_CONFIG']['licenseAccepted']      = true;
 $GLOBALS['TL_CONFIG']['installPassword']      = '<%= config.install_password %>';
 $GLOBALS['TL_CONFIG']['installCount']         = 0;
 $GLOBALS['TL_CONFIG']['encryptionKey']        = '<%= config.encryption_key %>';
+<% if config.db_server_app == 'mysql' %>
 $GLOBALS['TL_CONFIG']['dbDriver']             = 'MySQL';
-$GLOBALS['TL_CONFIG']['dbHost']               = '<%= config.mysql.host || 'localhost' %>';
-$GLOBALS['TL_CONFIG']['dbPort']               = <%= config.mysql.port || 3306 %>;
-$GLOBALS['TL_CONFIG']['dbUser']               = '<%= config.mysql.user %>';
-$GLOBALS['TL_CONFIG']['dbPass']               = '<%= config.mysql.pass %>';
-$GLOBALS['TL_CONFIG']['dbDatabase']           = '<%= config.mysql.database %>';
+<% end %>
+$GLOBALS['TL_CONFIG']['dbHost']               = '<%= config.db_hostname || 'localhost' %>';
+$GLOBALS['TL_CONFIG']['dbPort']               = <%= config.db_port || 3306 %>;
+$GLOBALS['TL_CONFIG']['dbUser']               = '<%= config.db_username %>';
+$GLOBALS['TL_CONFIG']['dbPass']               = '<%= config.db_password %>';
+$GLOBALS['TL_CONFIG']['dbDatabase']           = '<%= config.db_database %>';
 $GLOBALS['TL_CONFIG']['dbPconnect']           = false;
 $GLOBALS['TL_CONFIG']['dbCharset']            = 'UTF8';
 $GLOBALS['TL_CONFIG']['adminEmail']           = '<%= config.admin_email %>';
