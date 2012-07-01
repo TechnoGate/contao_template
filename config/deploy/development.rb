@@ -61,7 +61,7 @@ set :keep_releases, 5
 # The contents_folders is a hash of key/value where the key is the name of the folder
 # created under 'shared_path/contents' and symlinked to the value (absolute path)
 # you can use public_path/current_path/deploy_to etc...
-set :contents_folder, {
+set :content_folders, {
   'contents' => "#{fetch :public_path}/tl_files/contents",
 }
 
@@ -70,6 +70,7 @@ set :contents_folder, {
 # server to another with the tasks mulltistage:sync:* instead they will be kept
 # between versions in the shared/items folder
 set :shared_items, [
+  'public/system/config/localconfig.php',
   'public/.htaccess',
   'public/sitemap.xml',
 ]
