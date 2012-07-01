@@ -45,7 +45,7 @@ GEM
       capistrano-server
       capistrano-utils
       rake
-    capistrano-content (0.0.3)
+    capistrano-content (0.0.4)
       capistrano (>= 2.12.0)
       capistrano-utils
       rake
@@ -57,7 +57,7 @@ GEM
       capistrano
       capistrano-utils
       rake
-    capistrano-utils (0.0.6)
+    capistrano-utils (0.0.7)
       capistrano (>= 2.12.0)
       rake
     capistrano_colors (0.5.5)
