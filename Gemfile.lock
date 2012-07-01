@@ -51,7 +51,7 @@ GEM
       capistrano
       capistrano-utils
       rake
-    capistrano-utils (0.0.2)
+    capistrano-utils (0.0.3)
       capistrano
       rake
     capistrano_colors (0.5.5)
