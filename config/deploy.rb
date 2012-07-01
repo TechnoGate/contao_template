@@ -29,6 +29,4 @@ after 'deploy', 'deploy:cleanup' # keeps only last 5 releases
 ## REQUIREMENTS ##
 ##################
 
-require 'capistrano_colors'
-require 'capistrano/ext/multistage'
 require 'capistrano/ext/contao'

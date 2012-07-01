@@ -26,7 +26,6 @@ group :development do
   gem 'contao'
 
   gem 'capistrano-contao'
-  gem 'capistrano_colors'
 
   gem 'pry'
   gem 'pry-doc'
