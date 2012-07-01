@@ -21,12 +21,15 @@ end
 
 gem 'jquery-rails'
 
-# Deploy with Capistrano
-# gem 'capistrano'
-
 group :development do
   gem 'foreman'
-  gem 'contao', '>= 0.5.0'
+  gem 'contao', '>= 0.5.0', path: '../contao'
+
+  gem 'capistrano-contao'
+  gem 'capistrano_colors'
+
+  gem 'pry'
+  gem 'pry-doc'
 end
 
 group :development, :test do
