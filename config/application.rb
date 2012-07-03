@@ -16,9 +16,6 @@ module ContaoTemplate
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # The application name
-    config.application_name = 'contao_template'
-
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
 
@@ -37,7 +34,14 @@ module ContaoTemplate
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    # Contao configurations
-    config.contao_path = 'contao'
+    #########################
+    # Contao configurations #
+    #########################
+
+    # Contao path
+    config.contao.path = 'contao'
+
+    # The application name
+    config.contao.application_name = 'contao_template'
   end
 end
