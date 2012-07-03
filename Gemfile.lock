@@ -219,7 +219,7 @@ DEPENDENCIES
   capistrano-contao
   coffee-rails (~> 3.2.1)
   compass-rails
-  contao
+  contao (~> 0.5.2)
   foreman
   jasmine-headless-webkit (>= 0.9.0.rc2)
   jasmine-rails
