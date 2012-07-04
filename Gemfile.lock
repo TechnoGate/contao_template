@@ -81,7 +81,7 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
-    contao (0.6.0)
+    contao (0.6.1)
       activesupport
       highline
       parseconfig
@@ -219,7 +219,7 @@ DEPENDENCIES
   capistrano-contao
   coffee-rails (~> 3.2.1)
   compass-rails
-  contao (~> 0.6.0)
+  contao (~> 0.6.1)
   foreman
   jasmine-headless-webkit (>= 0.9.0.rc2)
   jasmine-rails
