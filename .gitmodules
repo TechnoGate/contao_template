@@ -1,12 +1,12 @@
 [submodule "public"]
 	path = public
 	url = https://github.com/contao/core.git
-[submodule "contao/system/modules/assets"]
-	path = contao/system/modules/assets
-	url = https://github.com/TechnoGate/contao_assets.git
-[submodule "contao/system/modules/template-override"]
-	path = contao/system/modules/template-override
-	url = https://github.com/qzminski/contao-template-override.git
 [submodule "lib/contao/libraries/spyc"]
 	path = lib/contao/libraries/spyc
 	url = https://github.com/mustangostang/spyc.git
+[submodule "contao/core/system/modules/assets"]
+	path = contao/core/system/modules/assets
+	url = https://github.com/TechnoGate/contao_assets.git
+[submodule "contao/core/system/modules/template-override"]
+	path = contao/core/system/modules/template-override
+	url = https://github.com/qzminski/contao-template-override.git
