@@ -1,1 +1,1 @@
-../../../lib/contao/libraries/spyc/spyc.php
+../../../../lib/contao/libraries/spyc/spyc.php
