@@ -37,11 +37,12 @@ module ContaoTemplate
     #########################
     # Contao configurations #
     #########################
+    if config.respond_to? :contao
+      # Contao path
+      config.contao.path = 'contao'
 
-    # Contao path
-    config.contao.path = 'contao'
-
-    # The application name
-    config.contao.application_name = 'contao_template'
+      # The application name
+      config.contao.application_name = 'contao_template'
+    end
   end
 end
