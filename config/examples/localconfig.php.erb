@@ -34,9 +34,9 @@ $GLOBALS['TL_CONFIG']['licenseAccepted']      = true;
 $GLOBALS['TL_CONFIG']['installPassword']      = '<%= config.install_password %>';
 $GLOBALS['TL_CONFIG']['installCount']         = 0;
 $GLOBALS['TL_CONFIG']['encryptionKey']        = '<%= config.encryption_key %>';
-<% if config.db_server_app == 'mysql' %>
+<% if config.db_server_app == 'mysql' -%>
 $GLOBALS['TL_CONFIG']['dbDriver']             = 'MySQL';
-<% end %>
+<% end -%>
 $GLOBALS['TL_CONFIG']['dbHost']               = '<%= config.db_hostname || 'localhost' %>';
 $GLOBALS['TL_CONFIG']['dbPort']               = <%= config.db_port || 3306 %>;
 $GLOBALS['TL_CONFIG']['dbUser']               = '<%= config.db_username %>';
@@ -51,21 +51,21 @@ $GLOBALS['TL_CONFIG']['cron_daily']           = 20110701;
 $GLOBALS['TL_CONFIG']['timeZone']             = '<%= config.time_zone %>';
 $GLOBALS['TL_CONFIG']['rewriteURL']           = true;
 $GLOBALS['TL_CONFIG']['allowedTags']          = '<a><abbr><acronym><address><area><article><aside><b><big><blockquote><br><base><bdo><button><caption><cite><code><col><colgroup><dd><del><div><dfn><dl><dt><em><figure><figcaption><form><fieldset><footer><header><hr><h1><h2><h3><h4><h5><h6><i><iframe><img><input><ins><label><legend><li><link><map><nav><object><ol><optgroup><option><p><pre><param><q><section><select><small><span><strong><sub><sup><style><table><tbody><td><textarea><tfoot><th><thead><tr><tt><u><ul>';
-<% if config.smtp.enabled %>
+<% if config.smtp.enabled -%>
 $GLOBALS['TL_CONFIG']['useSMTP']              = true;
 $GLOBALS['TL_CONFIG']['smtpHost']             = '<%= config.smtp.host %>';
 $GLOBALS['TL_CONFIG']['smtpUser']             = '<%= config.smtp.user %>';
 $GLOBALS['TL_CONFIG']['smtpPass']             = '<%= config.smtp.pass %>';
-<% end %>
-<% if config.smtp.ssl %>
+<% end -%>
+<% if config.smtp.ssl -%>
 $GLOBALS['TL_CONFIG']['smtpEnc']              = 'ssl';
 $GLOBALS['TL_CONFIG']['smtpPort']             = <%= config.smtp.port || 465 %>;
-<% end %>
-<% unless Rails.env.production? %>
+<% end -%>
+<% unless Rails.env.production? -%>
 $GLOBALS['TL_CONFIG']['cacheMode']            = 'none';
 $GLOBALS['TL_CONFIG']['displayErrors']        = true;
 $GLOBALS['TL_CONFIG']['disableRefererCheck']  = true;
-<% end %>
+<% end -%>
 ### INSTALL SCRIPT STOP ###
 
 ?>

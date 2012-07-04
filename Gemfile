@@ -23,7 +23,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'foreman'
-  gem 'contao', '~> 0.5.2'
+  gem 'contao', '~> 0.6.0'
 
   gem 'capistrano-contao'
 
