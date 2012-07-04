@@ -4,7 +4,7 @@ require File.expand_path('../application', __FILE__)
 ## PROJECT SETTINGS ##
 ######################
 
-set :application,           Rails.application.config.application_name
+set :application,           Rails.application.config.contao.application_name
 set :scm,                   :git
 set :git_enable_submodules, true
 
