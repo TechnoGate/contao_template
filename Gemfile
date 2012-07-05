@@ -23,12 +23,12 @@ gem 'jquery-rails'
 
 group :development do
   gem 'foreman'
-  gem 'contao'
-
-  gem 'capistrano-contao'
 
   gem 'pry'
   gem 'pry-doc'
+
+  gem 'contao'
+  gem 'capistrano-contao'
 end
 
 group :development, :test do
