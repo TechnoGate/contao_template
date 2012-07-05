@@ -50,10 +50,10 @@ GEM
       capistrano (>= 2.12.0)
       capistrano-utils
       rake
-    capistrano-database (0.0.7)
+    capistrano-database (0.0.8)
       capistrano-utils
       rake
-    capistrano-multistage (0.0.3)
+    capistrano-multistage (0.0.4)
       capistrano (>= 2.12.0)
       rake
     capistrano-server (0.0.2)
