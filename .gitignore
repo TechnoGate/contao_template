@@ -18,3 +18,5 @@
 # Contao
 contao/tl_files/contenu/
 contao/tl_files/contents/
+contao/*/system/runonce.php
+contao/*/system/modules/*/runonce.php
